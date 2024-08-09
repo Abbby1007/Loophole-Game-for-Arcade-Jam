@@ -1,0 +1,35 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#start{
+  background-color: #549C30;
+}
+
+#gameArea {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 25px;
+}
+
+button{
+  size: 25px;
+  font-size: 18px;
+  padding: 15 px 25 px;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  margin: 10px
+}
+
+p { 
+  margin: 5px 0;
+  font-size: 20px;
+}
