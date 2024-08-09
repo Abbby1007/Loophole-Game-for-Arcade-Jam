@@ -33,3 +33,18 @@ p {
   margin: 5px 0;
   font-size: 20px;
 }
+
+#rpsGameArea{
+  text-align: left;
+}
+
+#results{
+  font-size: 20px;
+}
+
+
+#choices{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
