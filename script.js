@@ -11,8 +11,8 @@ function userName(){
 function yes(){
   document.getElementById('appear').innerHTML = `<b> Employer: </b> Well we want our employees to be able to think outside the box. <br> <b> Employer: </b> Which is why interviewees must complete 3 challenges before moving on to the next interview phase 
   <br> <b> Employer: </b> You understand all that? 
-  <br> <button onclick="yesMoveOn()"> Yes!!! </button> 
-  <button onclick="no()"> NO?! </button>  `
+  <br> <button onclick="yesMoveOn()"> <b> You: </b> Yes!!! </button> 
+  <button onclick="no()"> <b> You: </b> NO?! </button>  `
 }
 
 function no(){
@@ -54,7 +54,8 @@ function playRound(playerChoice){
      if (currentRound <= totalRound) {
 
        if (currentRound == 3){
-         
+         document.getElementById("rpsappear").innerHTML = `----------------------------------------------------- <br> <b> Giz: </b> Hmmm, it seems impossible to win, it's almost like the computer knows your everymove <br> <b> Giz: ... </b> <br> <button onclick ="weird()"> <b> You: </b>... Weird!? </button>
+`
        }
        roundDisplay.textContent = `Round: ${currentRound} of ${totalRound}`;
        currentRound++;
@@ -87,9 +88,11 @@ function playRound(playerChoice){
          playerRoundsWonDisplay.textContent = `Rounds Won: ${PlayerRoundWon}`;
          computerRoundsWonDisplay.textContent = `Rounds Computer Won: ${ComputerRoundWon}`;
        }
-     }
-  
+     } 
+}
 
-  
+function weird(){
+  document.getElementById("rpsappear2").innerHTML = `<b> Giz: </b> aha, it seems there is an error in rules of the challenge. <br>
+  <b> Giz: </b> Try inspecting the instructions <br> <button> <b> You: </b> I inspected the Instructiosn (clicked the Instructions) </button> `
 }
 // End of Rock Paper Scissors Code

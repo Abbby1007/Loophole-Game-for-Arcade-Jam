@@ -34,9 +34,9 @@ p {
   font-size: 20px;
 }
 
-#rpsGameArea{
+/* #rpsGameArea{
   text-align: left;
-}
+} */
 
 #results{
   font-size: 20px;
@@ -48,3 +48,7 @@ p {
   margin: 0;
   padding: 0;
 }
+
+/* #rpsappear{
+  text-align: right;
+} */
