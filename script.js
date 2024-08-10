@@ -16,7 +16,7 @@ function yes(){
 }
 
 function no(){
-  document.getElementById('appear').innerHTML = ` <b> Employer: </b> Really ... dang, well ... GET OUT!!!! <br><a href="index.html"> <button> GET OUT !!!!</button> </a>`
+  document.getElementById('appear').innerHTML = ` <b> Employer: </b> Really ... dang, well ... GET OUT!!!! <br><a href="gameOver.html"> <button> GET OUT !!!!</button> </a>`
 }
 
 
@@ -31,9 +31,9 @@ const paperButton = document.getElementById('PAPER');
 const scissorsButton = document.getElementById('SCISSORS');
 
 
-rockButton.addEventListener('click', () => playRound('ROCK'));
-paperButton.addEventListener('click', () => playRound('PAPER'));
-scissorsButton.addEventListener('click', () => playRound('SCISSORS'));
+// rockButton.addEventListener('click', () => playRound('ROCK'));
+// paperButton.addEventListener('click', () => playRound('PAPER'));
+// scissorsButton.addEventListener('click', () => playRound('SCISSORS'));
 
 let PlayerRoundWon = 0;
 let ComputerRoundWon = 0;
@@ -92,7 +92,34 @@ function playRound(playerChoice){
 }
 
 function weird(){
-  document.getElementById("rpsappear2").innerHTML = `<b> Giz: </b> aha, it seems there is an error in rules of the challenge. <br>
-  <b> Giz: </b> Try inspecting the instructions <br> <button> <b> You: </b> I inspected the Instructiosn (clicked the Instructions) </button> `
+  document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br><b> Giz: </b> BINGO!!, it seems there is an error in rules of the challenge. <br>
+  <b> Giz: </b> Try inspecting the instructions <br> <button onclick="inspect()"> <b> You: </b> I inspected the Instructions</button> <button onclick="whatDoYouMean()"> <b> You: </b> What do you mean?</button> `
 }
 // End of Rock Paper Scissors Code
+
+function whatDoYouMean(){
+  document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br> <b> Giz: </b> Try clicking the Instructions sentence <br> <button onclick="inspect()"> <b> You: </b> I did that</button> <button onclick = "getOut2()"> <b> You: </b>I still don't understand </button>`
+}
+
+function getOut2(){
+  document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br>  <b> Giz: </b> Im sorry partner but I don't think your cut out for this job :(  <a href="gameOver.html"><button> <b> You: </b> I understand :(</button> </a>` 
+}
+
+function inspect(){
+   document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br> <b> Giz: </b> Good Job Partner, you probably notice that you can change the instructions <br> <b> Giz: </b> If you word it correctly, you might be able to change the rules of the game. <br> <b> Giz: </b> I have an idea for 5 new rules, and one of them must work, can you give me a hand?
+<br> <button onclick="firstChallengeHint()"> <b> You: </b> I'll give it a try </button> <button onclick="getOut2()"> <b> You: </b> No </button> `
+}
+
+function firstChallengeHint(){
+  document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br> <b> Giz: </b> Okay Partner make sure to type exactly what I suggest or the new rule won't work. <br> Change Instructions to: <br> <li> Instructions: Win 1 match of Rock, Paper, Scissors </li>  <li> test </li>  <li> test </li> <li> Instructions: lose 5 matches of Rock, Paper, Scissors </li> <li> test </li> <br> <b> Giz: </b> When your done click the test button <br> <button onclick="firstChallengeSubmit()" > Test </button>`
+}
+
+var firstChallenge = document.getElementById("1stChallenge");
+function firstChallengeSubmit(){
+  if(firstChallenge.textContent == "Instructions: lose 5 matches of Rock, Paper, Scissors"){
+    document.getElementById("rpsappear2").innerHTML =`Congratulations`
+  }
+  else{
+    document.getElementById("rpsappear2").innerHTML =`Try Again`
+  }
+}
