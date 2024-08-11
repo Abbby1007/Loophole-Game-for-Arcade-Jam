@@ -52,3 +52,7 @@ p {
 /* #rpsappear{
   text-align: right;
 } */
+
+#gameOver{
+  color: red;
+}

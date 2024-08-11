@@ -9,7 +9,7 @@ function userName(){
   }
 
 function yes(){
-  document.getElementById('appear').innerHTML = `<b> Employer: </b> Well we want our employees to be able to think outside the box. <br> <b> Employer: </b> Which is why interviewees must complete 3 challenges before moving on to the next interview phase 
+  document.getElementById('appear').innerHTML = `<b> Employer: </b> Well we want our employees to be able to work iwht out robot companions. <br> <b> Employer: </b> Which is why interviewees must complete 1 challenge with a robot companion before moving on to the next interview phase 
   <br> <b> Employer: </b> You understand all that? 
   <br> <button onclick="yesMoveOn()"> <b> You: </b> Yes!!! </button> 
   <button onclick="no()"> <b> You: </b> NO?! </button>  `
@@ -53,7 +53,7 @@ const roundsDrawDisplay = document.getElementById(`round-draw`);
 function playRound(playerChoice){
      if (currentRound <= totalRound) {
 
-       if (currentRound == 3){
+       if (currentRound == 5){
          document.getElementById("rpsappear").innerHTML = `----------------------------------------------------- <br> <b> Giz: </b> Hmmm, it seems impossible to win, it's almost like the computer knows your everymove <br> <b> Giz: ... </b> <br> <button onclick ="weird()"> <b> You: </b>... Weird!? </button>
 `
        }
@@ -106,20 +106,33 @@ function getOut2(){
 }
 
 function inspect(){
-   document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br> <b> Giz: </b> Good Job Partner, you probably notice that you can change the instructions <br> <b> Giz: </b> If you word it correctly, you might be able to change the rules of the game. <br> <b> Giz: </b> I have an idea for 5 new rules, and one of them must work, can you give me a hand?
+   document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br> <b> Giz: </b> Good Job Partner, you probably notice that you can change the instructions <br> <b> Giz: </b> If you word it correctly, you might be able to change the rules of the game. <br> <b> Giz: </b> I have an idea for 3 new rules, and one of them must work, can you give me a hand?
 <br> <button onclick="firstChallengeHint()"> <b> You: </b> I'll give it a try </button> <button onclick="getOut2()"> <b> You: </b> No </button> `
 }
 
 function firstChallengeHint(){
-  document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br> <b> Giz: </b> Okay Partner make sure to type exactly what I suggest or the new rule won't work. <br> Change Instructions to: <br> <li> Instructions: Win 1 match of Rock, Paper, Scissors </li>  <li> test </li>  <li> test </li> <li> Instructions: lose 5 matches of Rock, Paper, Scissors </li> <li> test </li> <br> <b> Giz: </b> When your done click the test button <br> <button onclick="firstChallengeSubmit()" > Test </button>`
+  document.getElementById("rpsappear").innerHTML = `-----------------------------------------------------<br> <b> Giz: </b> Okay Partner make sure to type exactly what I suggest or the new rule won't work. <br> Change Instructions to: <br> <li> Instructions: Win 1 match of Rock, Paper, Scissors </li>  <li> Instructions: lose 5 matches of Rock, Paper, Scissors </li> <li> Instructions: Lose 1 match of Rock, Paper, Scissors </li> <br> <b> Giz: </b> When your done click the test button <br> <button onclick="firstChallengeSubmit()" > Test </button>`
 }
 
 var firstChallenge = document.getElementById("1stChallenge");
 function firstChallengeSubmit(){
   if(firstChallenge.textContent == "Instructions: lose 5 matches of Rock, Paper, Scissors"){
-    document.getElementById("rpsappear2").innerHTML =`Congratulations`
+    Congratulations();
+    // document.getElementById("rpsappear2").innerHTML =`Congratulations`
   }
   else{
-    document.getElementById("rpsappear2").innerHTML =`Try Again`
+    document.getElementById("rpsappear2").innerHTML =`Try  a different rule`
   }
+}
+
+function Congratulations(){
+  document.getElementById("rpsappear2").innerHTML =`<b> Giz: </b> Yes, congratulations on passing the challenge <br>  <a href= "pagevvvvv.html"><button> <b> You: </b> Thank you!!! :D</button> </a>` 
+}
+
+function notToBad(){
+   document.getElementById("appear").innerHTML =`<b> Employer:</b> You work well with Giz <br> <b> Employer:</b> And that is just the skill we are looking for at our company <br> <b> Employer</b> You can come back tommorow for the last part of your interview <br> <button onclick="youCanGo()"> <b>You:</b> Thank you .... </button>`
+}
+
+function youCanGo(){
+  document.getElementById("appear").innerHTML =`<b> Employer:</b> Okay you can leave now your starting to freak me out <br> <a href="pagessssss.html"><button> <b> You:</b> Okay ... bye ... *leaves room*</button> </a>`
 }
