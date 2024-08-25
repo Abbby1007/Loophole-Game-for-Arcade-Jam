@@ -4,4 +4,4 @@ For the arcade game jam
 Theme: loopholes.
 
 Play here: https://abbby1007.github.io/Loophole-Game-for-Arcade-Jam/
-<br> How to Play: To play your just have to click on the buttons to progress the story.
+<br> How to Play: To play you just have to click on the buttons to progress the story.
